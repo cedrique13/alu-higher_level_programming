@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-"""Script that fetches https://alu-intranet.hbtn.io/status using urllib"""
+"""Fetches https://alu-intranet.hbtn.io/status using urllib"""
+
 import urllib.request
 
+url = "https://alu-intranet.hbtn.io/status"
+headers = {"User-Agent": "Mozilla/5.0"}  # <- Added a User-Agent header
 
-if __name__ == "__main__":
-    url = "https://alu-intranet.hbtn.io/status"
-    with urllib.request.urlopen(url) as response:
-        body = response.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(body)))
-        print("\t- content: {}".format(body))
-        print("\t- utf8 content: {}".format(body.decode('utf-8')))
+request = urllib.request.Request(url, headers=headers)  # <- Used Request object
+
+with urllib.request.urlopen(request) as response:  # <- Passed Request object here
+    body = response.read()
+    print("Body response:")
+    print("\t- type:", type(body))
+    print("\t- content:", body)
+    print("\t- utf8 content:", body.decode("utf-8"))
+
