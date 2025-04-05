@@ -27,4 +27,3 @@ if __name__ == "__main__":
     # Print in the specified format
     for state_name, city_id, city_name in results:
         print(f"{state_name}: ({city_id}) {city_name}")
-
