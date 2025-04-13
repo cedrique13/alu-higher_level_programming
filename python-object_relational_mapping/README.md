@@ -1,5 +1,3 @@
-
-
 ```markdown
 # Python and MySQL ORM Project
 
@@ -158,4 +156,3 @@ python3 -c 'print(__import__("my_module").my_function.__doc__)'
 This project will give you a solid understanding of how to interact with a MySQL database both with traditional SQL and using an Object-Relational Mapper (ORM). It’s a great introduction to working with databases in Python and helps you understand the power and flexibility of SQLAlchemy.
 
 ---
-
